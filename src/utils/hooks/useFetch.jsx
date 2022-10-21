@@ -10,14 +10,12 @@ function useFetch (url) {
         (async function () {
             setIsLoading(true)
             const response = await fetch(url)
-            console.log(url)
             const responseData = await response.json()
             if (response.ok) {
                 setDatas(responseData)
-                console.log(responseData)
                 setIsLoading(false)
             } else {
-                console.log(responseData)
+                console.log("===")
             }
         })()
     },[url])

@@ -17,4 +17,7 @@ header {
     margin-left:35px;
     color: $color-primary;
     text-decoration: none;
+    &--underlined {
+        text-decoration: underline;
+    }
 }
