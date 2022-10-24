@@ -6,6 +6,7 @@ header {
     margin: auto;
     margin-bottom: 50px;
     margin-top: 50px;
+    font-size: 24px;
 }
 
 .header__logo { 
@@ -20,4 +21,8 @@ header {
     &--underlined {
         text-decoration: underline;
     }
+}
+
+.linkActive {
+    text-decoration: underline;
 }
