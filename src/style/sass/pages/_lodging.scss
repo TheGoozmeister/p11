@@ -1,19 +1,33 @@
 .lodging {
     width: 80%;
     margin: auto;
+    @include smartphone {
+        width: 90%;
+        margin: auto;
+    }
     &__informations {
         display: flex;
+        height: 180px;
         justify-content: space-between;
         align-items: stretch;
         color: $color-primary;
         padding-bottom: 20px;
+        @include smartphone {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
         &__lodging {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
             &__title {
                 font-weight: 500;
                 font-size: 36px;
                 padding-bottom: 15px;
+                margin-right: 20px;
             }
             &__location{
                 font-weight: 500;
@@ -23,6 +37,12 @@
             &__tags{
                 display: flex;
                 padding: 0px;
+                margin: 0px;
+                @include smartphone {
+                    width: 100%;
+                    margin: auto;
+                    margin-top: 20px;
+                }
                 &__tag{
                     background-color: $color-primary;
                     list-style: none;
@@ -39,9 +59,20 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include smartphone {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 30px;
+            }
             &__host {
                 display: flex;
                 align-items: center;
+                @include smartphone {
+                    justify-content: end;
+                    width: 20%;
+                }
                 &__name{
                     font-size: 18px;
                     padding-right: 10px;
@@ -60,8 +91,17 @@
     &__collapses {
         display:flex;
         justify-content: space-between;
+        margin-top: 20px;
+        @include smartphone {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
         &__collapse {
             width: 48%;
+            @include smartphone{
+                width: 100%;
+            }
             & p {
                 margin: 0;
                 padding:5px;
@@ -73,7 +113,10 @@
 .rating {
     display: flex;
     justify-content: space-between;
+    @include smartphone {
+        width: 40%;
+    }
     &__greyStar {
-        color: #E3E3E3;
+        background-color: #E3E3E3;
     }
 }

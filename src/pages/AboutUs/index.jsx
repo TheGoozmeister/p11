@@ -30,7 +30,7 @@ function AboutUs () {
     return (
         <div className="aboutus">
             <Banner 
-                picture={banner_aboutus}
+                className="  aboutus__banner" picture={banner_aboutus}
             />
             <div className="aboutus__collapses">
                 {aboutUsDatas.map((section) => (

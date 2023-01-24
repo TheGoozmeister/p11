@@ -35,7 +35,7 @@ function Header () {
         <header>
             <img src={logo} alt="logo" className='header__logo'/>
             <nav>
-                <Link to="/" className={className.home}>Acceuil</Link>
+                <Link to="/" className={className.home}>Accueil</Link>
                 <Link to="/aboutus" className={className.aboutus}>A propos</Link>
             </nav>
         </header>

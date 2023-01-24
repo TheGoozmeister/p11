@@ -7,11 +7,23 @@ header {
     margin-bottom: 50px;
     margin-top: 50px;
     font-size: 24px;
+    font-family: "Montserrat Light";
+    @include smartphone {
+        font-size: 12px;
+        margin-bottom: 15px;
+        width: 90%;
+        margin-top: 25px;
+        text-transform: uppercase;
+    }
 }
 
 .header__logo { 
     width: 210px;
     height: 68px;
+    @include smartphone {
+        width: 105px;
+        height: 34px;
+    }
 }
 
 .header__link {
@@ -20,6 +32,9 @@ header {
     text-decoration: none;
     &--underlined {
         text-decoration: underline;
+    }
+    @include smartphone {
+        margin-left: 10px;
     }
 }
 

@@ -1,11 +1,13 @@
 @import "./utils/colors";
+@import "./utils/mixins";
 @import "./base/base";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/banner";
-@import "./composants/cards";
+@import "./composants/card";
 @import "./composants/collapse";
 @import "./composants/slideshow";
+@import "./pages/home";
 @import "./pages/error";
 @import "./pages/aboutus";
 @import "./pages/lodging";

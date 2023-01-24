@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom"
 import Slideshow from "../../components/Slideshow"
 import Collapse from "../../components/Collapse"
 import Rating from "../../components/Rating"
+import Error from "../../components/Error"
 const lodgingDatas = require("../../logements.json")
+
 
 function getLodgingWithId (lodgingDatas, lodgingId) {
     for (let lodging of lodgingDatas) {
@@ -24,6 +26,12 @@ function getHTMLLinesWithArray (array) {
 function Lodging () { 
     const {lodgingId} = useParams()
     const lodging = getLodgingWithId(lodgingDatas, lodgingId)
+
+    if (!lodging) {
+        return (
+            <Error />
+        )
+    }
     const lodgingEquipment = getHTMLLinesWithArray(lodging.equipments)
 
     return (
@@ -46,7 +54,7 @@ function Lodging () {
                             <img src={lodging.host.picture} alt={lodging.host.name} />
                         </div>
                     </div>
-                    <Rating rate={parseInt(lodging.rating)} />
+                    <Rating rate={parseInt(lodging.rating)} className="lodging__informations__hostAndRate__rating"/>
                 </div>
             </div>
             <div className="lodging__collapses">

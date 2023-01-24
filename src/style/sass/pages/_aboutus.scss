@@ -2,3 +2,9 @@
     width: 80%;
     margin: auto;
 }
+
+.aboutus__banner {
+    @include smartphone {
+        height: 223px;
+    }
+}

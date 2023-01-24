@@ -1,10 +1,16 @@
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat Medium";
   src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-family: "Montserrat Regular";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat Medium", sans-serif;
 }
 
 header {
@@ -16,11 +22,27 @@ header {
   margin-bottom: 50px;
   margin-top: 50px;
   font-size: 24px;
+  font-family: "Montserrat Light";
+}
+@media all and (max-width: 768px) {
+  header {
+    font-size: 12px;
+    margin-bottom: 15px;
+    width: 90%;
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
 }
 
 .header__logo {
   width: 210px;
   height: 68px;
+}
+@media all and (max-width: 768px) {
+  .header__logo {
+    width: 105px;
+    height: 34px;
+  }
 }
 
 .header__link {
@@ -30,6 +52,11 @@ header {
 }
 .header__link--underlined {
   text-decoration: underline;
+}
+@media all and (max-width: 768px) {
+  .header__link {
+    margin-left: 10px;
+  }
 }
 
 .linkActive {
@@ -45,10 +72,20 @@ footer {
   padding-top: 50px;
   margin-top: 50px;
 }
+@media all and (max-width: 768px) {
+  footer {
+    margin-top: 0px;
+  }
+}
 
 .footer__text {
   padding-top: 20px;
   padding-bottom: 10px;
+}
+@media all and (max-width: 768px) {
+  .footer__text {
+    font-size: 12px;
+  }
 }
 
 .banner {
@@ -58,18 +95,32 @@ footer {
   margin: auto;
   margin-bottom: 40px;
 }
+@media all and (max-width: 768px) {
+  .banner {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    width: 90%;
+  }
+}
 .banner__image {
   width: 100%;
   height: 223px;
   border-radius: 25px;
+  object-fit: cover;
   filter: brightness(50%);
+}
+@media all and (max-width: 768px) {
+  .banner__image {
+    height: 110px;
+    filter: brightness(60%);
+  }
 }
 .banner__text {
   position: absolute;
-  top: 30%;
-  left: 20%;
-  right: 20%;
-  bottom: 35%;
+  left: 22.9%;
+  right: 22.14%;
+  top: 28.32%;
+  bottom: 65.04%;
   color: white;
   padding: 0;
   margin: 0;
@@ -77,6 +128,18 @@ footer {
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
+}
+@media all and (max-width: 768px) {
+  .banner__text {
+    font-size: 24px;
+    position: absolute;
+    left: 9.6%;
+    top: 17.04%;
+    bottom: 80.05%;
+    text-align: left;
+    padding-right: 15%;
+    padding-bottom: 15px;
+  }
 }
 
 .card {
@@ -87,29 +150,34 @@ footer {
   position: relative;
   margin: 20px;
 }
+@media all and (max-width: 768px) {
+  .card {
+    margin: 0px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 255px;
+    overflow: hidden;
+  }
+}
 .card__image {
-  object-fit: cover;
   height: 100%;
+  width: 100%;
   border-radius: 10px;
+  overflow: hidden;
+}
+.card__image img {
+  border-radius: 10px;
+  object-fit: contain;
 }
 .card__title {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  bottom: 0px;
   color: white;
-}
-
-.home__cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #F6F6F6;
-  border-radius: 25px;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .collapse {
@@ -149,13 +217,24 @@ footer {
   margin: auto;
   margin-bottom: 30px;
 }
+@media all and (max-width: 768px) {
+  .slideshow {
+    height: 230px;
+  }
+}
 .slideshow__image {
   width: 100%;
   height: 415px;
   overflow: hidden;
   border-radius: 25px;
 }
+@media all and (max-width: 768px) {
+  .slideshow__image {
+    height: 230px;
+  }
+}
 .slideshow__image img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 25px;
@@ -178,11 +257,44 @@ footer {
 
 .arrow {
   top: 40%;
-  font-size: 100px;
+  font-size: 250%;
   color: white;
 }
 .arrow:hover {
   cursor: pointer;
+}
+
+.home__cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+}
+@media all and (max-width: 768px) {
+  .home__cards {
+    width: 90%;
+    margin: auto;
+    padding-top: 0px;
+    margin-top: 0px;
+    background-color: white;
+    padding-bottom: 15px;
+    overflow: hidden;
+  }
+}
+@media all and (max-width: 768px) {
+  .home__cards a {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    border-radius: 25px;
+  }
 }
 
 .error {
@@ -197,6 +309,7 @@ footer {
   font-weight: 700;
   font-size: 288px;
   padding-bottom: 30px;
+  font-family: "Montserrat Bold", sans-serif;
 }
 .error__text {
   font-weight: 500;
@@ -215,25 +328,49 @@ footer {
   margin: auto;
 }
 
+@media all and (max-width: 768px) {
+  .aboutus__banner {
+    height: 223px;
+  }
+}
+
 .lodging {
   width: 80%;
   margin: auto;
 }
+@media all and (max-width: 768px) {
+  .lodging {
+    width: 90%;
+    margin: auto;
+  }
+}
 .lodging__informations {
   display: flex;
+  height: 180px;
   justify-content: space-between;
   align-items: stretch;
   color: #FF6060;
   padding-bottom: 20px;
 }
+@media all and (max-width: 768px) {
+  .lodging__informations {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
 .lodging__informations__lodging {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .lodging__informations__lodging__title {
   font-weight: 500;
   font-size: 36px;
   padding-bottom: 15px;
+  margin-right: 20px;
 }
 .lodging__informations__lodging__location {
   font-weight: 500;
@@ -243,6 +380,14 @@ footer {
 .lodging__informations__lodging__tags {
   display: flex;
   padding: 0px;
+  margin: 0px;
+}
+@media all and (max-width: 768px) {
+  .lodging__informations__lodging__tags {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
 }
 .lodging__informations__lodging__tags__tag {
   background-color: #FF6060;
@@ -259,9 +404,24 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 }
+@media all and (max-width: 768px) {
+  .lodging__informations__hostAndRate {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+}
 .lodging__informations__hostAndRate__host {
   display: flex;
   align-items: center;
+}
+@media all and (max-width: 768px) {
+  .lodging__informations__hostAndRate__host {
+    justify-content: end;
+    width: 20%;
+  }
 }
 .lodging__informations__hostAndRate__host__name {
   font-size: 18px;
@@ -278,9 +438,22 @@ footer {
 .lodging__collapses {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+}
+@media all and (max-width: 768px) {
+  .lodging__collapses {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 .lodging__collapses__collapse {
   width: 48%;
+}
+@media all and (max-width: 768px) {
+  .lodging__collapses__collapse {
+    width: 100%;
+  }
 }
 .lodging__collapses__collapse p {
   margin: 0;
@@ -291,8 +464,13 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+@media all and (max-width: 768px) {
+  .rating {
+    width: 40%;
+  }
+}
 .rating__greyStar {
-  color: #E3E3E3;
+  background-color: #E3E3E3;
 }
 
 /*# sourceMappingURL=style.css.map */

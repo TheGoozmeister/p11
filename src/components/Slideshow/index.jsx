@@ -1,19 +1,15 @@
 import { useState } from "react"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
 
+
 function Slideshow({photosArray}) {
-    console.log(photosArray)
     const numberOfphotos = photosArray.length
     const firstPhoto = photosArray[0]
-    console.log(firstPhoto)
     const lastPhoto = photosArray[numberOfphotos-1]
-    console.log(lastPhoto)
     const [actualPhoto, setActualPhoto] = useState(firstPhoto)
-    console.log(actualPhoto)
 
     const previousPhoto = function (actualPhoto) {
         if (actualPhoto===firstPhoto) {
-            console.log(actualPhoto)
             setActualPhoto(lastPhoto)
         } else {
             const actualPhotoIndex = photosArray.indexOf(actualPhoto)

@@ -1,7 +1,8 @@
-function Banner ({text="", picture}) { 
+function Banner ({text="", picture, className=""}) { 
+    const fullClassName = "banner__image" + className;
     return (
         <div className='banner'>
-            <img src={picture} alt="banner" className="banner__image" />
+            <img src={picture} alt="banner" className={fullClassName} />
             <p className="banner__text">{text}</p>
         </div>
     )

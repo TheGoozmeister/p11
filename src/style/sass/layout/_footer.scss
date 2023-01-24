@@ -6,9 +6,15 @@ footer {
     color: white;
     padding-top: 50px;
     margin-top: 50px;
+    @include smartphone {
+        margin-top: 0px;
+    }
 }
 
 .footer__text{
     padding-top: 20px;
     padding-bottom: 10px;
+    @include smartphone {
+        font-size: 12px;
+    }
 }
