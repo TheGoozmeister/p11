@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa"
+import arrow_right from "../../assets/vectors/arrow_right.png"
+import arrow_left from "../../assets/vectors/arrow_left.png"
 
 
 function Slideshow({photosArray}) {
@@ -32,8 +33,11 @@ function Slideshow({photosArray}) {
             </div>
             {numberOfphotos !== 1 &&
             <div>
-                <span className ="slideshow__arrowsLeft arrow" onClick={()=>previousPhoto(actualPhoto)}><FaAngleLeft /></span>
-                <span className ="slideshow__arrowsRight arrow" onClick={()=>nextPhoto(actualPhoto)}><FaAngleRight /></span>
+                <div className ="slideshow__arrowsLeft arrow" onClick={()=>previousPhoto(actualPhoto)}>
+                    <img src={arrow_left} alt="arrow_left" />
+                </div>
+                <div className ="slideshow__arrowsRight arrow" onClick={()=>nextPhoto(actualPhoto)}>
+                    <img src={arrow_right} alt="arrow_right" /></div>
                 <div className="slideshow__bulletpoint">
                     {photosArray.indexOf(actualPhoto)+1}/{numberOfphotos}
                 </div>
