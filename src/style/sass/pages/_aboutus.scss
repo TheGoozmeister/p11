@@ -1,6 +1,9 @@
 .aboutus__collapses {
-    width: 80%;
+    width: 70%;
     margin: auto;
+    @include smartphone {
+        width: 90%;
+    }
 }
 
 .aboutus__banner {

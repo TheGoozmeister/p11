@@ -36,6 +36,8 @@
             }
             &__tags{
                 display: flex;
+                flex-wrap: wrap;
+                width: 100%;
                 padding: 0px;
                 margin: 0px;
                 @include smartphone {
@@ -51,6 +53,9 @@
                     margin-right: 15px;
                     border-radius: 10px;
                     font-size: 14px;
+                    @include smartphone {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }
@@ -68,9 +73,10 @@
             }
             &__host {
                 display: flex;
+                justify-content: flex-end;
                 align-items: center;
                 @include smartphone {
-                    justify-content: end;
+                    justify-content: flex-end;
                     width: 20%;
                 }
                 &__name{
@@ -116,7 +122,20 @@
     @include smartphone {
         width: 40%;
     }
+    &__coloredStar {
+        padding-right: 10px;
+        & img {
+            @include smartphone{
+                width: 100%;
+            }
+        }
+    }
     &__greyStar {
-        background-color: #E3E3E3;
+        padding-right: 10px;
+        & img {
+            @include smartphone{
+                width: 100%;
+            }
+        }
     }
 }

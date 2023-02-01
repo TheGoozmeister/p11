@@ -5,17 +5,29 @@
     align-items: center;
     color: $color-primary;
     margin-bottom: 50px;
+    padding: 20px;
     &__404 {
         font-weight: 700;
         font-size: 288px;
         padding-bottom: 30px;
-        font-family: "Montserrat Bold", sans-serif;
+        font-family: "Montserrat", sans-serif;
+        @include smartphone {
+            font-size: 96px;
+            padding-top: 150px;
+            padding-bottom: 10px;
+        }
     }
     &__text {
+        width: 95%;
         font-weight: 500;
         font-size: 36px;
         margin-bottom: 20px;
         padding-bottom: 100px;
+        text-align: center;
+        @include smartphone {
+            font-size: 18px;
+    
+        }
     }
     &__backHome {
         font-weight: 500;

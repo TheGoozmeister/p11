@@ -1,16 +1,6 @@
-@font-face {
-  font-family: "Montserrat Medium";
-  src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
-  font-family: "Montserrat Light";
-  src: url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
-  font-family: "Montserrat Bold";
-  src: url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-family: "Montserrat Regular";
-  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
-}
 * {
   box-sizing: border-box;
-  font-family: "Montserrat Medium", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -22,7 +12,8 @@ header {
   margin-bottom: 50px;
   margin-top: 50px;
   font-size: 24px;
-  font-family: "Montserrat Light";
+  font-family: "Montserrat";
+  font-weight: 400;
 }
 @media all and (max-width: 768px) {
   header {
@@ -117,16 +108,15 @@ footer {
 }
 .banner__text {
   position: absolute;
-  left: 22.9%;
+  left: 20.9%;
   right: 22.14%;
-  top: 28.32%;
-  bottom: 65.04%;
+  top: 30.32%;
   color: white;
   padding: 0;
   margin: 0;
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 48px;
 }
 @media all and (max-width: 768px) {
@@ -134,8 +124,8 @@ footer {
     font-size: 24px;
     position: absolute;
     left: 9.6%;
-    top: 17.04%;
-    bottom: 80.05%;
+    top: 24.04%;
+    right: auto;
     text-align: left;
     padding-right: 15%;
     padding-bottom: 15px;
@@ -178,6 +168,11 @@ footer {
   bottom: 0px;
   color: white;
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+}
+@media all and (max-width: 768px) {
+  .card__title {
+    text-align: left;
+  }
 }
 
 .collapse {
@@ -241,11 +236,37 @@ footer {
 }
 .slideshow__arrowsLeft {
   position: absolute;
-  left: 5px;
+  height: 79px;
+  left: 10px;
+}
+@media all and (max-width: 768px) {
+  .slideshow__arrowsLeft {
+    height: 20px;
+  }
+}
+.slideshow__arrowsLeft img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .slideshow__arrowsRight {
   position: absolute;
-  right: 5px;
+  height: 79px;
+  right: 10px;
+}
+@media all and (max-width: 768px) {
+  .slideshow__arrowsRight {
+    height: 20px;
+  }
+}
+.slideshow__arrowsRight img {
+  height: 79px;
+  object-fit: cover;
+}
+@media all and (max-width: 768px) {
+  .slideshow__arrowsRight img {
+    height: 20px;
+  }
 }
 .slideshow__bulletpoint {
   position: absolute;
@@ -257,11 +278,23 @@ footer {
 
 .arrow {
   top: 40%;
-  font-size: 250%;
-  color: white;
 }
 .arrow:hover {
   cursor: pointer;
+}
+@media all and (max-width: 768px) {
+  .arrow {
+    top: 45%;
+  }
+}
+.arrow__img {
+  height: 20px;
+  object-fit: cover;
+}
+@media all and (max-width: 768px) {
+  .arrow__img {
+    height: 20px;
+  }
 }
 
 .home__cards {
@@ -304,18 +337,33 @@ footer {
   align-items: center;
   color: #FF6060;
   margin-bottom: 50px;
+  padding: 20px;
 }
 .error__404 {
   font-weight: 700;
   font-size: 288px;
   padding-bottom: 30px;
-  font-family: "Montserrat Bold", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+@media all and (max-width: 768px) {
+  .error__404 {
+    font-size: 96px;
+    padding-top: 150px;
+    padding-bottom: 10px;
+  }
 }
 .error__text {
+  width: 95%;
   font-weight: 500;
   font-size: 36px;
   margin-bottom: 20px;
   padding-bottom: 100px;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .error__text {
+    font-size: 18px;
+  }
 }
 .error__backHome {
   font-weight: 500;
@@ -324,8 +372,13 @@ footer {
 }
 
 .aboutus__collapses {
-  width: 80%;
+  width: 70%;
   margin: auto;
+}
+@media all and (max-width: 768px) {
+  .aboutus__collapses {
+    width: 90%;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -379,6 +432,8 @@ footer {
 }
 .lodging__informations__lodging__tags {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   padding: 0px;
   margin: 0px;
 }
@@ -398,6 +453,11 @@ footer {
   border-radius: 10px;
   font-size: 14px;
 }
+@media all and (max-width: 768px) {
+  .lodging__informations__lodging__tags__tag {
+    margin-bottom: 10px;
+  }
+}
 .lodging__informations__hostAndRate {
   height: 100%;
   display: flex;
@@ -415,11 +475,12 @@ footer {
 }
 .lodging__informations__hostAndRate__host {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 @media all and (max-width: 768px) {
   .lodging__informations__hostAndRate__host {
-    justify-content: end;
+    justify-content: flex-end;
     width: 20%;
   }
 }
@@ -469,8 +530,21 @@ footer {
     width: 40%;
   }
 }
+.rating__coloredStar {
+  padding-right: 10px;
+}
+@media all and (max-width: 768px) {
+  .rating__coloredStar img {
+    width: 100%;
+  }
+}
 .rating__greyStar {
-  background-color: #E3E3E3;
+  padding-right: 10px;
+}
+@media all and (max-width: 768px) {
+  .rating__greyStar img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
