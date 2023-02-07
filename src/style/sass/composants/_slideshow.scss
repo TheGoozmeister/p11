@@ -6,6 +6,10 @@
     margin-bottom: 30px;
     @include smartphone {
         height: 230px;
+        margin-bottom: 10px;
+    }
+    @include tablet {
+        height: 330px;
     }
     &__image {
         width: 100%;
@@ -14,20 +18,31 @@
         border-radius: 25px;
         @include smartphone {
             height: 230px;
+            border-radius: 10px;
+        }
+        @include tablet {
+            height: 330px;
         }
         & img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             border-radius: 25px;
+            @include smartphone {
+                border-radius: 10px;
+            }
         }
     }
     &__arrowsLeft {
         position: absolute;
         height: 79px;
-        left:10px;
+        left:15px;
         @include smartphone {
             height: 20px;
+            left: 5px;
+        }
+        @include tablet {
+            height: 50px;
         }
         & img {
             width: 100%;
@@ -38,12 +53,16 @@
     &__arrowsRight {
         position: absolute;
         height: 79px;
-        right:10px; 
+        right:15px; 
         @include smartphone {
             height: 20px;
+            right: 5px; 
+        }
+        @include tablet {
+            height: 50px;
         }
         & img {
-            height: 79px;
+            height: 100%;
             object-fit: cover;
             @include smartphone {
                 height: 20px;
@@ -56,6 +75,9 @@
         font-size: 18px;
         bottom: 5px;
         color: white;
+        @include smartphone {
+            font-size: 15px;
+        }
     }
 }
 

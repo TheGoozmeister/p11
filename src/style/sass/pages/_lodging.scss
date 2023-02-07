@@ -5,6 +5,9 @@
         width: 90%;
         margin: auto;
     }
+    @include tablet {
+        width: 90%;
+    }
     &__informations {
         display: flex;
         height: 180px;
@@ -13,6 +16,12 @@
         color: $color-primary;
         padding-bottom: 20px;
         @include smartphone {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding-bottom: 5px;
+        }
+        @include tablet {
             display: flex;
             flex-direction: column;
             height: auto;
@@ -28,11 +37,17 @@
                 font-size: 36px;
                 padding-bottom: 15px;
                 margin-right: 20px;
+                @include smartphone {
+                    font-size: 18px;
+                }
             }
             &__location{
                 font-weight: 500;
                 font-size: 18px;
                 padding-bottom: 5px;
+                @include smartphone {
+                    font-size: 14px;
+                }
             }
             &__tags{
                 display: flex;
@@ -45,6 +60,9 @@
                     margin: auto;
                     margin-top: 20px;
                 }
+                @include tablet {
+                    margin-bottom: 10px;
+                }
                 &__tag{
                     background-color: $color-primary;
                     list-style: none;
@@ -53,8 +71,11 @@
                     margin-right: 15px;
                     border-radius: 10px;
                     font-size: 14px;
+                    margin-top: 5px;
+                    font-weight: 500;
                     @include smartphone {
                         margin-bottom: 10px;
+                        font-size: 10px;
                     }
                 }
             }
@@ -69,7 +90,14 @@
                 flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 30px;
+                margin-top: 10px;
+            }
+            @include tablet {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
             }
             &__host {
                 display: flex;
@@ -82,13 +110,23 @@
                 &__name{
                     font-size: 18px;
                     padding-right: 10px;
+                    font-weight: 500;
+                    @include smartphone {
+                        font-size: 12px;
+                    }
                 }
                 &__picture{
                     border-radius: 50%;
                     width: 64px;
+                    @include smartphone {
+                        width: 32px;
+                    }
                     & img {
                         border-radius: 50%;
                         width: 64px;
+                        @include smartphone {
+                            width: 32px;
+                        }
                     }
                 }
             }

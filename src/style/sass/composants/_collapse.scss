@@ -10,11 +10,18 @@
         color: $color-textWithBackground;
         padding-left: 10px;
         border-radius: 5px;
+        font-weight: 500;
+        @include smartphone {
+            font-size: 13px;
+        }
         &__icon {
             display: flex;
             align-items: center;
             font-size: 30px;
             margin-right: 10px;
+            @include smartphone {
+                font-size: 25px;
+            }
             &:hover {
                 cursor: pointer;
             }
@@ -25,5 +32,9 @@
         background-color: $color-background;
         padding: 25px 10px 10px 10px;
         border-radius: 5px;
+        font-weight: 400;
+        @include smartphone {
+            font-size: 12px;
+        }
     }
 }

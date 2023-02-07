@@ -18,6 +18,9 @@
         padding-bottom: 15px;
         overflow: hidden;
     }
+    @include tablet {
+        width: 90%;
+    }
     & a {
         @include smartphone {
             width: 100%;

@@ -4,6 +4,9 @@
     @include smartphone {
         width: 90%;
     }
+    @include tablet {
+        width: 80%;
+    }
 }
 
 .aboutus__banner {
