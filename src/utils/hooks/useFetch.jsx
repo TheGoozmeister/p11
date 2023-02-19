@@ -22,4 +22,5 @@ function useFetch (url) {
     return {datas, isLoading}
 }
 
+
 export default useFetch

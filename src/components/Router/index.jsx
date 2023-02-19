@@ -1,14 +1,15 @@
 import Home from '../../pages/Home'
 import AboutUs from '../../pages/AboutUs'
 import Lodging from '../../pages/Lodging'
+import Error from '../../pages/Error'
 import Header from '../Header'
 import Footer from '../Footer'
-import Error from '../Error'
 import {
     BrowserRouter as Router,
     Routes,
     Route
 } from "react-router-dom"
+
 
 function AppRouter () {
     return (

@@ -114,6 +114,9 @@
                     @include smartphone {
                         font-size: 12px;
                     }
+                    @include tablet {
+                        font-size: 15px;
+                    }
                 }
                 &__picture{
                     border-radius: 50%;

@@ -29,7 +29,7 @@ function Slideshow({photosArray}) {
     return (
         <div className="slideshow">
             <div className="slideshow__image">              
-                    <img src={actualPhoto} alt="lodging" />                 
+                <img src={actualPhoto} alt="lodging" />                 
             </div>
             {numberOfphotos !== 1 &&
             <div>
@@ -37,7 +37,8 @@ function Slideshow({photosArray}) {
                     <img src={arrow_left} alt="arrow_left" />
                 </div>
                 <div className ="slideshow__arrowsRight arrow" onClick={()=>nextPhoto(actualPhoto)}>
-                    <img src={arrow_right} alt="arrow_right" /></div>
+                    <img src={arrow_right} alt="arrow_right" />
+                </div>
                 <div className="slideshow__bulletpoint">
                     {photosArray.indexOf(actualPhoto)+1}/{numberOfphotos}
                 </div>

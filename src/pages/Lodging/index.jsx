@@ -2,14 +2,13 @@ import { useParams } from "react-router-dom"
 import Slideshow from "../../components/Slideshow"
 import Collapse from "../../components/Collapse"
 import Rating from "../../components/Rating"
-import Error from "../../components/Error"
+import Error from "../Error"
 const lodgingDatas = require("../../logements.json")
 
 
 function getLodgingWithId (lodgingDatas, lodgingId) {
     for (let lodging of lodgingDatas) {
         if (lodging.id===lodgingId) { 
-            console.log(lodging.id, lodgingId, lodging)
             return lodging
         }
     }
