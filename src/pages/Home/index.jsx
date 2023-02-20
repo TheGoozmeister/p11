@@ -15,7 +15,7 @@ function Home () {
                 picture={banner}
             />
             {isLoading ? (
-                <div className="loader"></div>
+                <div className="loader">Chargement en cours...</div>
             ) : (
                 <div className="home__cards">
                     {lodgingDatas.map((lodging) => (

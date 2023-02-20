@@ -409,6 +409,11 @@ footer {
   }
 }
 
+.loader {
+  text-align: center;
+  padding: 10px;
+}
+
 .error {
   display: flex;
   flex-direction: column;
